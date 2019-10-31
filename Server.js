@@ -22,7 +22,6 @@ mongodb.connect(connectionString, {useUnifiedTopology: true}, function(err, clie
 
 function PasswordProtect(req, res, next) {
     res.set('WWW-Authenticate', 'Basic realm="ToDoAppv2"')
-    console.log(req.headers.authorization)
     if (req.headers.authorization == "Basic cGFyaTpwYXJp") {
         next()
     }
