@@ -9,10 +9,15 @@ toDoApp.use(express.urlencoded({extended: false}))
 
 const connectionString = "mongodb+srv://toDoAdmin:Xc%5F12345@cluster0-stx5t.mongodb.net/dbToDo?retryWrites=true&w=majority"
 
+let port = process.env.PORT
+if ((port == "") || (port == null)) {
+    port = 3000
+}
+
 let db
 mongodb.connect(connectionString, {useUnifiedTopology: true}, function(err, client) {
     db = client.db()
-    toDoApp.listen(3000)
+    toDoApp.listen(port)
 })
 
 function PasswordProtect(req, res, next) {
