@@ -1,0 +1,68 @@
+:root {
+    --header-font: "Courier";
+}
+
+body {
+    margin: 0;
+    font-family: "Verdana"
+}
+
+.addDiv {
+    width: 100vw;
+    background: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    position: fixed;
+    height: 130px;
+}
+
+.addDiv h1 {
+    color: #ffffff;
+    font-size: 2.8em;
+    font-weight: normal;
+    font-family: var(--header-font, "Courier")
+}
+
+.addDiv input {
+    padding: 5px;
+    width: 100px;
+}
+
+.addDiv button {
+    padding: 7px;
+    background: yellow;
+    border-width: 0;
+    font-weight: bold;
+}
+
+.tasksDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: black;
+    min-height: 100vh;
+    padding-top: 150px;
+}
+
+.taskDiv {
+    background: rgb(180, 167, 132);
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    align-items: center;
+    justify-content: space-between;;
+}
+
+.taskDiv button {
+    padding: 7px;
+    background: rgb(39, 104, 179);
+    border-width: 0;
+    width: 80px;
+    color: rgb(255, 251, 0);
+}
